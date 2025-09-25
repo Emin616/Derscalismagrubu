@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ders Çalışma Grubu</title>
+
+  <!-- Font ve ikonlar -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="Logo.png" type="image/png">
+
+  <link rel="stylesheet" href="Bas.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="Logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <h1>Ders Çalışma Grubu</h1>
+        <p class="tagline">Arkadaşlarınla ders çalış, başarıya ulaş.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2>Hoş Geldin!</h2>
+      <p class="lead">Ders Çalışma Grubu’na giriş yaparak arkadaşlarınla birlikte verimli şekilde ders çalışabilirsin.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="giris.html">Giriş Yap</a>
+      </div>
+    </section>
+
+    <section class="info-grid">
+      <article class="card">
+        <h3>Kolay Çalışma</h3>
+        <p>Dersleri birlikte takip et, bilgilerini paylaş, sınavlara hazırlan.</p>
+      </article>
+      <article class="card">
+        <h3>Motivasyon</h3>
+        <p>Arkadaşlarınla çalışırken motivasyonunu yüksek tut.</p>
+      </article>
+      <article class="card">
+        <h3>Başarı</h3>
+        <p>LGS’de hedeflediğin puanlara ulaşmak için çalışmanı planla.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Ders Çalışma Grubu</small>
+  </footer>
+
+  <script src="Bas.js"></script>
+  <script>
+    // Yıl otomatik
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Eğer zaten giriş yapılmışsa anasayfaya yönlendir
+    const oturum = localStorage.getItem("oturum");
+    if (oturum) {
+      window.location.href = "Anasayfa.html";
+    }
+  </script>
+</body>
+</html>

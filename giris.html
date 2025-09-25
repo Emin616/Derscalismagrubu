@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giriş Yap — Ders Çalışma</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="giris.css">
+</head>
+<body>
+  <main class="auth-page">
+    <section class="auth-card">
+      <div class="logo-area">
+        <img src="Logo.png" alt="Logo">
+        <h1>Ders Çalışma</h1>
+      </div>
+
+      <p class="muted">Hesabına giriş yaparak çalışmaya başlayabilirsin.</p>
+
+      <form id="girisform" autocomplete="on" novalidate>
+        <label for="name">Kullanıcı Adı</label>
+        <input id="name" name="name" type="text" placeholder="Kullanıcı adını gir" required>
+
+        <label for="password">Şifre</label>
+        <div class="pw-row">
+          <input id="password" name="password" type="password" placeholder="Şifreni gir" required>
+          <button type="button" id="togglePassword" class="toggle-btn">👁</button>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Giriş Yap</button>
+
+        <div class="alt-links">
+          <a href="index.html">← Ana sayfaya dön</a>
+        </div>
+      </form>
+
+      <div id="alert-box" class="alert hidden"></div>
+    </section>
+  </main>
+
+  <script src="giris.js"></script>
+</body>
+</html>

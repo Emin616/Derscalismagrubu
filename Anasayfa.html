@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Sayfa — Ders Çalışma Grubu</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Anasayfa.css">
+  <link rel="icon" href="Logo.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="Logo.png" alt="Logo" class="logo" onerror="this.style.display='none'">
+      <div class="brand-text">
+        <h1>Ders Çalışma Grubu</h1>
+        <p class="tagline">Arkadaşlarınla ders çalış, başarıya ulaş.</p>
+      </div>
+    </div>
+
+    <nav class="nav-actions">
+      <button id="logoutBtn" class="btn btn-ghost">Çıkış Yap</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero card">
+      <h2 id="welcome">Hoş geldin!</h2>
+      <p class="lead">Başarıya giden yolda arkadaşlarınla birlikte çalışmaya devam et.</p>
+    </section>
+
+    <section class="info-grid">
+      <article class="card">
+        <h3>Ders Programı</h3>
+        <p>Derslerini planla, çalışma saatlerini düzenle.</p>
+      </article>
+      <article class="card">
+        <h3>Paylaşımlar</h3>
+        <p>Notlarını, özetlerini ve fikirlerini paylaş.</p>
+      </article>
+      <article class="card">
+        <h3>Motivasyon</h3>
+        <p>Arkadaşlarınla birbirinizi motive edin, başarıya odaklanın.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>© <span id="year"></span> Ders Çalışma Grubu</small>
+  </footer>
+
+  <script src="Anasayfa.js"></script>
+  <script>
+    // Yıl otomatik
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
